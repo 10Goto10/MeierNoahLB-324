@@ -1,0 +1,19 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0  # Use the latest stable version
+    hooks:
+      - id: check-ast
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.5.1  # Use the latest stable version
+    hooks:
+      - id: mypy
+
+  - repo: https://github.com/pytest-dev/pytest
+    rev: 7.4.3  # Use the latest stable version
+    hooks:
+      - id: pytest
+        stages: [push]  # Run pytest during push
